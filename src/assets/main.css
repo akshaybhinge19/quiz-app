@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 20px;
+  font-family: sans-serif;
+  padding-top: 20px;
+  background: #e6ecf1;
+}
+
+.ctr {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.questions-ctr {
+  position: relative;
+  width: 100%;
+}
+.question {
+  width: 100%;
+  padding: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  background-color: #00ca8c;
+  color: #fff;
+  box-sizing: border-box;
+}
+.single-question {
+  position: relative;
+  width: 100%;
+}
+.single-question.backdrop-attempted {
+  pointer-events: none;
+}
+.answer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #8e959f;
+  padding: 20px;
+  font-size: 18px;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.2s linear all;
+}
+.answer:not(.is-answered) {
+  cursor: pointer;
+}
+.answer:not(.is-answered):hover {
+  background-color: #8ce200;
+  border-color: #8ce200;
+  color: #fff;
+}
+.answer:not(.is-correct-answered).is-answered {
+  background-color: grey;
+}
+.answer.is-correct-answered {
+  background-color: #8ce200;
+}
+.answer .wrong-answer-tick {
+  color:red;
+  font-size: 18px;
+}
+/* .answer span {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 0.75em;
+  font-style: italic;
+} */
+.progress {
+  height: 50px;
+  margin-top: 10px;
+  background-color: #ddd;
+  position: relative;
+}
+.bar {
+  height: 50px;
+  background-color: #ff6372;
+  transition: all 0.3s linear;
+}
+.status {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+
+.title {
+  width: 100%;
+  padding: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #12cbc4;
+  color: #fff;
+  box-sizing: border-box;
+}
+.desc {
+  border: 1px solid #8e959f;
+  padding: 20px;
+  font-size: 18px;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.4s linear all;
+  text-align: center;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: all 0.3s linear;
+}
+.fade-leave-active {
+  transition: all 0.3s linear;
+  opacity: 0;
+  position: absolute;
+}
+
+.reset-btn {
+  background-color: #ff6372;
+    border: 0;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 25px;
+    margin: 10px auto;
+    display: block;
+}
+.action-btn {
+  background-color: lightblue;
+    border: 0;
+    font-size: 22px;
+    color: black;
+    padding: 10px 25px;
+    margin: 10px auto;
+    display: block;
+}
+/* .action-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 1ms;
+} */
+button[disabled]:hover {
+  cursor: not-allowed;
+  transform: none;
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+.result{ 
+  width: 100%;
+}
+.actions{
+  display: flex;
+}
+
+.reset-btn:active, .reset-btn:focus, .reset-btn:hover{
+  border: 0;
+  outline: 0;
+}
